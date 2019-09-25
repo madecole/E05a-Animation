@@ -26,7 +26,7 @@ class Ball:
 
     def draw(self):
         """ Draw the balls with the instance variables we have. """
-        arcade.draw_circle_filled(self.position_x, self.position_y, self.radius, self.color) #Draws the ball using the parameters listed
+        arcade.draw_circle_filled(self.position_x, self.position_y, self.radius, self.color) #Draws the ball using the parameters listed above
 
 
 class MyGame(arcade.Window):
@@ -59,7 +59,7 @@ class MyGame(arcade.Window):
         """
         Called when the user presses a mouse button.
         """
-        print(f"You clicked button number: {button}")
+        print(f"You clicked button number: {button}") # Counts each click as number 1 to help the program keep track of what color the ball is 
         if button == arcade.MOUSE_BUTTON_LEFT:
             self.ball.color = arcade.color.BLACK # Sets the ball to the color black whenever the mouse is clicked
 

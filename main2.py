@@ -19,10 +19,10 @@ class Ball:
     def __init__(self, position_x, position_y, change_x, change_y, radius, color):
 
         # Take the parameters of the init function above, and create instance variables out of them.
-        self.position_x = position_x # Checks for the mouse's position on the x-axis
-        self.position_y = position_y # Checks for the mouse's position on the y-axis
-        self.change_x = change_x # Moves the ball to the mouse's coordinates
-        self.change_y = change_y # Moves the ball to the mouse's coordinates
+        self.position_x = position_x 
+        self.position_y = position_y 
+        self.change_x = change_x 
+        self.change_y = change_y 
         self.radius = radius
         self.color = color
 
@@ -39,7 +39,7 @@ class Ball:
         if self.position_x < self.radius:
             self.position_x = self.radius
 
-        if self.position_x > SCREEN_WIDTH - self.radius:
+        if self.position_x > SCREEN_WIDTH - self.radius: 
             self.position_x = SCREEN_WIDTH - self.radius
 
         if self.position_y < self.radius:
@@ -68,7 +68,7 @@ class MyGame(arcade.Window):
     def on_draw(self):
         """ Called whenever we need to draw the window. """
         arcade.start_render() # Opens a new window and begins the program
-        self.ball.draw() # Draws our ball
+        self.ball.draw() # Calls the function to draw our ball
 
     def update(self, delta_time):
         self.ball.update() # Updates the ball in terms of location 
