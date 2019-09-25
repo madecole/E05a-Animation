@@ -19,7 +19,7 @@ class Ball:
     def __init__(self, position_x, position_y, change_x, change_y, radius, color):
 
         # Take the parameters of the init function above, and create instance variables out of them.
-        self.position_x = position_x 
+        self.position_x = position_x  # I think that all of these simply relabel/elaborate what the parameters are representing in this function
         self.position_y = position_y 
         self.change_x = change_x 
         self.change_y = change_y 
@@ -36,7 +36,7 @@ class Ball:
         self.position_x += self.change_x
 
         # See if the ball hit the edge of the screen. If so, change direction
-        if self.position_x < self.radius:
+        if self.position_x < self.radius:  # These lines check if the ball is against the wall by accounting for the radius of the ball instead of focusing on the middle of the ball because then half of the ball would be allowed off screen before recognizing that it is off screen
             self.position_x = self.radius
 
         if self.position_x > SCREEN_WIDTH - self.radius: 
@@ -93,7 +93,7 @@ class MyGame(arcade.Window):
 
 
 def main():
-    window = MyGame(SCREEN_WIDTH, SCREEN_HEIGHT, SCREEN_TITLE)
+    window = MyGame(SCREEN_WIDTH, SCREEN_HEIGHT, SCREEN_TITLE) # Runs the program in Arcade 
     arcade.run()
 
 
